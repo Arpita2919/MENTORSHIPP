@@ -24,7 +24,7 @@ export default function Gamification() {
   return (
     <>
       <header className="mb-8">
-        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#dae2fd] mb-2">Gamification & Achievements</h1>
+        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#B9B9B9] mb-2">Gamification & Achievements</h1>
         <p className="text-[#b9c8de]">Track progress, earn XP, climb levels, and compete on the leaderboard</p>
       </header>
 
@@ -50,8 +50,8 @@ export default function Gamification() {
 
               <div>
                 <p className="text-xs font-bold text-[#c2c6d6] uppercase tracking-widest mb-2">Progress to Next</p>
-                <p className="text-lg font-bold text-[#dae2fd]">{userStats.xp}/{userStats.nextLevelXp}</p>
-                <div className="w-full bg-[#131b2e] rounded-full h-2 mt-2 overflow-hidden">
+                <p className="text-lg font-bold text-[#B9B9B9]">{userStats.xp}/{userStats.nextLevelXp}</p>
+                <div className="w-full bg-[#000000] rounded-full h-2 mt-2 overflow-hidden">
                   <div style={{ width: `${(userStats.xp / userStats.nextLevelXp) * 100}%` }} className="h-full bg-gradient-to-r from-[#4d8eff] to-[#4edea3]"></div>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function Gamification() {
 
         {/* Tabs */}
         <div className="col-span-12">
-          <div className="flex border-b border-slate-800/20 bg-[#171f33] rounded-t-xl overflow-hidden">
+          <div className="flex border-b border-slate-800/20 bg-[#000000] rounded-t-xl overflow-hidden">
             {[
               { id: 'leaderboard', label: 'Leaderboard', icon: 'leaderboard' },
               { id: 'achievements', label: 'Achievements', icon: 'trophy' },
@@ -73,7 +73,7 @@ export default function Gamification() {
                 className={`flex-1 px-6 py-4 text-sm font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 ${
                   activeTab === tab.id
                     ? 'text-[#adc6ff] border-b-2 border-[#adc6ff]'
-                    : 'text-[#b9c8de] hover:text-[#dae2fd]'
+                    : 'text-[#b9c8de] hover:text-[#B9B9B9]'
                 }`}
               >
                 <span className="material-symbols-outlined">{tab.icon}</span>
@@ -82,7 +82,7 @@ export default function Gamification() {
             ))}
           </div>
 
-          <div className="bg-[#171f33] rounded-b-xl border border-t-0 border-slate-800/20 p-6">
+          <div className="bg-[#000000] rounded-b-xl border border-t-0 border-slate-800/20 p-6">
             {/* Leaderboard */}
             {activeTab === 'leaderboard' && (
               <div className="space-y-3">
@@ -92,7 +92,7 @@ export default function Gamification() {
                     className={`flex items-center justify-between p-4 rounded-lg border transition-all ${
                       user.isUser
                         ? 'bg-[#4edea3]/10 border-[#4edea3]/40'
-                        : 'bg-[#131b2e] border-slate-700 hover:border-[#adc6ff]/40'
+                        : 'bg-[#000000] border-slate-700 hover:border-[#adc6ff]/40'
                     }`}
                   >
                     <div className="flex items-center gap-4 flex-1">
@@ -101,7 +101,7 @@ export default function Gamification() {
                       </div>
 
                       <div className="flex-1">
-                        <p className="font-bold text-[#dae2fd]">{user.avatar} {user.name}</p>
+                        <p className="font-bold text-[#B9B9B9]">{user.avatar} {user.name}</p>
                         <p className="text-xs text-[#b9c8de]">{user.level}</p>
                       </div>
                     </div>
@@ -133,9 +133,9 @@ export default function Gamification() {
                   { emoji: '🏆', title: 'Leaderboard Top 10', desc: 'Reach top 10 on leaderboard', locked: true },
                   { emoji: '🚀', title: 'Rocket Start', desc: 'Earn 1000 XP in first week', locked: true },
                 ].map((achievement, idx) => (
-                  <div key={idx} className={`p-6 rounded-lg border ${achievement.locked ? 'bg-[#131b2e]/50 border-slate-700/50 opacity-50' : 'bg-[#131b2e] border-[#4edea3]/20'}`}>
+                  <div key={idx} className={`p-6 rounded-lg border ${achievement.locked ? 'bg-[#000000]/50 border-slate-700/50 opacity-50' : 'bg-[#000000] border-[#4edea3]/20'}`}>
                     <p className="text-4xl mb-2">{achievement.emoji}</p>
-                    <p className="font-bold text-[#dae2fd] mb-1">{achievement.title}</p>
+                    <p className="font-bold text-[#B9B9B9] mb-1">{achievement.title}</p>
                     <p className="text-xs text-[#b9c8de]">{achievement.desc}</p>
                     {achievement.locked && <p className="text-xs text-slate-500 mt-2">🔒 Locked</p>}
                   </div>
@@ -153,7 +153,7 @@ export default function Gamification() {
                   { level: 'Pro', range: '6000-10000 XP', color: 'from-orange-400 to-red-500', current: false },
                   { level: 'Elite', range: '10000+ XP', color: 'from-yellow-400 to-orange-500', current: false },
                 ].map((item, idx) => (
-                  <div key={idx} className={`p-6 rounded-lg border ${item.current ? 'bg-[#4edea3]/10 border-[#4edea3]/40' : 'bg-[#131b2e] border-slate-700'}`}>
+                  <div key={idx} className={`p-6 rounded-lg border ${item.current ? 'bg-[#4edea3]/10 border-[#4edea3]/40' : 'bg-[#000000] border-slate-700'}`}>
                     <div className="flex items-center justify-between mb-3">
                       <div>
                         <p className={`font-bold text-lg bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>{item.level}</p>
@@ -162,7 +162,7 @@ export default function Gamification() {
                       {item.current && <span className="px-3 py-1 bg-[#4edea3]/20 text-[#4edea3] text-xs font-bold rounded-full">Your Level</span>}
                     </div>
 
-                    <div className="w-full bg-[#0b1326] rounded-full h-2 overflow-hidden">
+                    <div className="w-full bg-[#000000] rounded-full h-2 overflow-hidden">
                       <div style={{ width: item.current ? '85%' : '0%' }} className={`h-full bg-gradient-to-r ${item.color}`}></div>
                     </div>
                   </div>
@@ -174,8 +174,8 @@ export default function Gamification() {
 
         {/* XP Sources */}
         <div className="col-span-12">
-          <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
-            <h3 className="text-lg font-bold text-[#dae2fd] mb-6 flex items-center gap-2">
+          <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
+            <h3 className="text-lg font-bold text-[#B9B9B9] mb-6 flex items-center gap-2">
               <span className="material-symbols-outlined text-[#adc6ff]">stars</span>
               How to Earn XP
             </h3>
@@ -189,9 +189,9 @@ export default function Gamification() {
                 { action: 'Top Leaderboard', xp: '+500 XP', icon: '👑' },
                 { action: 'Streak Bonus', xp: '+20 XP/day', icon: '🔥' },
               ].map((item, idx) => (
-                <div key={idx} className="p-4 bg-[#131b2e] rounded-lg border border-slate-700">
+                <div key={idx} className="p-4 bg-[#000000] rounded-lg border border-slate-700">
                   <p className="text-2xl mb-2">{item.icon}</p>
-                  <p className="font-bold text-[#dae2fd] mb-1">{item.action}</p>
+                  <p className="font-bold text-[#B9B9B9] mb-1">{item.action}</p>
                   <p className="text-lg font-bold text-[#4edea3]">{item.xp}</p>
                 </div>
               ))}

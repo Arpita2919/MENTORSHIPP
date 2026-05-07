@@ -28,7 +28,7 @@ export default function ClientLayout({ children }) {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-[#0b1326]">
+      <div className="flex items-center justify-center min-h-screen bg-[#000000]">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#adc6ff]"></div>
       </div>
     );
@@ -53,7 +53,7 @@ export default function ClientLayout({ children }) {
       {user && !isAuthPage && (
         <>
           {/* TopAppBar */}
-          <header className="fixed top-0 left-0 right-0 z-50 bg-[#0b1326]/60 backdrop-blur-xl flex justify-between items-center px-8 h-16">
+          <header className="fixed top-0 left-0 right-0 z-50 bg-[#000000]/60 backdrop-blur-xl flex justify-between items-center px-8 h-16">
             <div className="flex items-center gap-4">
               <span className="text-xl font-bold tracking-tighter text-blue-100 font-headline">The Cognitive Architecture</span>
             </div>
@@ -67,14 +67,14 @@ export default function ClientLayout({ children }) {
           </header>
 
           {/* SideNavBar */}
-          <aside className="fixed left-0 top-0 h-full w-64 z-40 bg-[#0b1326] border-r border-slate-800/20 flex flex-col py-8 px-4 shadow-2xl shadow-black/40">
+          <aside className="fixed left-0 top-0 h-full w-64 z-40 bg-[#000000] border-r border-slate-800/20 flex flex-col py-8 px-4 shadow-2xl shadow-black/40">
             <div className="mt-16 mb-8 px-4">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg overflow-hidden bg-[#222a3d] border border-slate-700/20">
                   <div className="w-full h-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-bold">AI</div>
                 </div>
                 <div>
-                  <p className="text-sm font-bold font-headline text-[#dae2fd]">Executive Coach</p>
+                  <p className="text-sm font-bold font-headline text-[#B9B9B9]">Executive Coach</p>
                   <div className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#adc6ff] ai-pulse"></span>
                     <p className="text-[10px] text-slate-500 font-medium tracking-wider uppercase">AI Pulse: Active</p>

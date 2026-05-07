@@ -78,7 +78,7 @@ export default function Login() {
         </div>
 
         {/* Login Card */}
-        <div className="bg-[#131b2e] p-8 rounded-xl backdrop-blur border border-slate-800/30 relative">
+        <div className="bg-[#0F0F0F] p-8 rounded-xl backdrop-blur border border-slate-800/30 relative">
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#adc6ff]/30 to-transparent"></div>
 
           <form onSubmit={handleLogin} className="space-y-6">
@@ -94,7 +94,7 @@ export default function Login() {
               type="button"
               onClick={handleGoogleLogin}
               disabled={loading}
-              className="w-full bg-[#222a3d] border border-slate-700/50 text-[#dae2fd] font-semibold py-4 rounded-lg flex items-center justify-center gap-3 hover:bg-[#2d3449] disabled:opacity-50 transition-all"
+              className="w-full bg-[#0f0f0f] border border-slate-700/50 text-[#B9B9B9] font-semibold py-4 rounded-lg flex items-center justify-center gap-3 hover:bg-[#1a1a1a] disabled:opacity-50 transition-all"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
@@ -121,7 +121,7 @@ export default function Login() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="your@email.com"
-                  className="w-full bg-[#222a3d] border border-slate-700/50 rounded-lg py-4 pl-12 pr-4 text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff] transition-all"
+                  className="w-full bg-[#0f0f0f] border border-slate-700/50 rounded-lg py-4 pl-12 pr-4 text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff] transition-all"
                   required
                 />
               </div>
@@ -137,7 +137,7 @@ export default function Login() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full bg-[#222a3d] border border-slate-700/50 rounded-lg py-4 pl-12 pr-12 text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff] transition-all"
+                  className="w-full bg-[#0f0f0f] border border-slate-700/50 rounded-lg py-4 pl-12 pr-12 text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff] transition-all"
                   required
                 />
                 <button
@@ -165,7 +165,7 @@ export default function Login() {
           <div className="mt-8 text-center">
             <p className="text-xs text-[#b9c8de]">
               Don't have an account?{' '}
-              <Link href="/signup" className="text-[#adc6ff] hover:text-[#dae2fd] font-bold transition-colors">
+              <Link href="/signup" className="text-[#adc6ff] hover:text-[#B9B9B9] font-bold transition-colors">
                 Sign up
               </Link>
             </p>
@@ -174,7 +174,7 @@ export default function Login() {
 
         {/* Footer */}
         <div className="mt-12 flex flex-col items-center space-y-6">
-          <div className="flex items-center gap-2 bg-[#222a3d]/50 px-4 py-1.5 rounded-full border border-slate-800/20">
+          <div className="flex items-center gap-2 bg-[#0f0f0f]/50 px-4 py-1.5 rounded-full border border-slate-800/20">
             <div className="w-1.5 h-1.5 rounded-full bg-[#4edea3] animate-pulse"></div>
             <span className="text-[10px] font-bold uppercase tracking-widest text-[#b9c8de]">Powered by Agentic Intelligence</span>
           </div>

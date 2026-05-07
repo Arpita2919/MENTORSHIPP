@@ -125,7 +125,7 @@ export default function Roadmaps() {
   return (
     <>
       <header className="mb-8">
-        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#dae2fd] mb-2">Adaptive Roadmaps</h1>
+        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#B9B9B9] mb-2">Adaptive Roadmaps</h1>
         <p className="text-[#b9c8de]">Choose from 73+ learning roadmaps, 5 best practices guides, or generate personalized paths with AI</p>
       </header>
 
@@ -133,34 +133,34 @@ export default function Roadmaps() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <button
             onClick={() => setMode('ai')}
-            className="bg-[#171f33] hover:bg-[#1a2236] rounded-xl p-8 border-2 border-[#adc6ff]/20 hover:border-[#adc6ff]/50 transition-all text-left group"
+            className="bg-[#000000] hover:bg-[#1a2236] rounded-xl p-8 border-2 border-[#adc6ff]/20 hover:border-[#adc6ff]/50 transition-all text-left group"
           >
             <span className="material-symbols-outlined text-5xl text-[#4edea3] mb-4 block group-hover:scale-110 transition-transform">
               auto_awesome
             </span>
-            <h3 className="text-2xl font-bold text-[#dae2fd] mb-2">AI-Generated</h3>
+            <h3 className="text-2xl font-bold text-[#B9B9B9] mb-2">AI-Generated</h3>
             <p className="text-[#b9c8de]">Personalized learning paths</p>
           </button>
 
           <button
             onClick={() => setMode('roadmaps')}
-            className="bg-[#171f33] hover:bg-[#1a2236] rounded-xl p-8 border-2 border-[#adc6ff]/20 hover:border-[#adc6ff]/50 transition-all text-left group"
+            className="bg-[#000000] hover:bg-[#1a2236] rounded-xl p-8 border-2 border-[#adc6ff]/20 hover:border-[#adc6ff]/50 transition-all text-left group"
           >
             <span className="material-symbols-outlined text-5xl text-[#4d8eff] mb-4 block group-hover:scale-110 transition-transform">
               maps
             </span>
-            <h3 className="text-2xl font-bold text-[#dae2fd] mb-2">Roadmaps</h3>
+            <h3 className="text-2xl font-bold text-[#B9B9B9] mb-2">Roadmaps</h3>
             <p className="text-[#b9c8de]">73+ learning PDFs</p>
           </button>
 
           <button
             onClick={() => setMode('practices')}
-            className="bg-[#171f33] hover:bg-[#1a2236] rounded-xl p-8 border-2 border-[#adc6ff]/20 hover:border-[#adc6ff]/50 transition-all text-left group"
+            className="bg-[#000000] hover:bg-[#1a2236] rounded-xl p-8 border-2 border-[#adc6ff]/20 hover:border-[#adc6ff]/50 transition-all text-left group"
           >
             <span className="material-symbols-outlined text-5xl text-[#4edea3] mb-4 block group-hover:scale-110 transition-transform">
               verified
             </span>
-            <h3 className="text-2xl font-bold text-[#dae2fd] mb-2">Best Practices</h3>
+            <h3 className="text-2xl font-bold text-[#B9B9B9] mb-2">Best Practices</h3>
             <p className="text-[#b9c8de]">5 industry guides</p>
           </button>
         </div>
@@ -169,8 +169,8 @@ export default function Roadmaps() {
       {mode === 'ai' && !roadmapData && !selectedPdfUrl && (
         <div className="grid grid-cols-12 gap-8 mb-8">
           <div className="col-span-12 lg:col-span-4">
-            <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20 space-y-6">
-              <h2 className="text-xl font-bold text-[#dae2fd]">Generate Your Roadmap</h2>
+            <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20 space-y-6">
+              <h2 className="text-xl font-bold text-[#B9B9B9]">Generate Your Roadmap</h2>
 
               <div>
                 <label className="block text-sm font-bold text-[#c2c6d6] uppercase tracking-widest mb-2">Target Role</label>
@@ -178,7 +178,7 @@ export default function Roadmaps() {
                   value={role}
                   onChange={(e) => setRole(e.target.value)}
                   placeholder="e.g., Senior Software Architect"
-                  className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]"
+                  className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]"
                 />
               </div>
 
@@ -200,7 +200,7 @@ export default function Roadmaps() {
           </div>
 
           <div className="col-span-12 lg:col-span-8">
-            <div className="bg-[#171f33] rounded-xl p-12 border border-slate-800/20 text-center">
+            <div className="bg-[#000000] rounded-xl p-12 border border-slate-800/20 text-center">
               <span className="material-symbols-outlined text-6xl text-[#adc6ff] opacity-50 block mb-4">map</span>
               <p className="text-[#b9c8de] text-lg">Enter your target role and generate a personalized roadmap</p>
             </div>
@@ -210,15 +210,15 @@ export default function Roadmaps() {
 
       {mode === 'roadmaps' && !selectedPdfUrl && (
         <div className="space-y-6 mb-8">
-          <div className="bg-[#171f33] rounded-xl p-6 border border-slate-800/20">
-            <h2 className="text-xl font-bold text-[#dae2fd] mb-4">Browse Learning Roadmaps (PDFs)</h2>
+          <div className="bg-[#000000] rounded-xl p-6 border border-slate-800/20">
+            <h2 className="text-xl font-bold text-[#B9B9B9] mb-4">Browse Learning Roadmaps (PDFs)</h2>
             <div className="flex gap-3">
               <input
                 type="text"
                 value={searchRoadmaps}
                 onChange={(e) => setSearchRoadmaps(e.target.value)}
                 placeholder="Search roadmaps... (e.g., Frontend, React, DevOps)"
-                className="flex-1 px-4 py-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]"
+                className="flex-1 px-4 py-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]"
               />
               <button
                 onClick={() => setMode(null)}
@@ -235,7 +235,7 @@ export default function Roadmaps() {
               <button
                 key={roadmap.filename}
                 onClick={() => handleSelectPdf(roadmap)}
-                className="group bg-[#171f33] hover:bg-[#1a2236] rounded-xl p-6 border-2 border-[#adc6ff]/20 hover:border-[#adc6ff]/50 transition-all text-left"
+                className="group bg-[#000000] hover:bg-[#1a2236] rounded-xl p-6 border-2 border-[#adc6ff]/20 hover:border-[#adc6ff]/50 transition-all text-left"
               >
                 <div className="flex items-start justify-between mb-3">
                   <span className="material-symbols-outlined text-[#4d8eff] text-3xl group-hover:scale-110 transition-transform">
@@ -245,7 +245,7 @@ export default function Roadmaps() {
                     download
                   </span>
                 </div>
-                <h3 className="font-semibold text-[#dae2fd] group-hover:text-[#adc6ff] transition-colors mb-1">
+                <h3 className="font-semibold text-[#B9B9B9] group-hover:text-[#adc6ff] transition-colors mb-1">
                   {roadmap.title}
                 </h3>
                 <p className="text-xs text-[#b9c8de]">Click to view PDF</p>
@@ -254,7 +254,7 @@ export default function Roadmaps() {
           </div>
 
           {filteredRoadmaps.length === 0 && (
-            <div className="text-center py-12 bg-[#171f33] rounded-xl border border-slate-800/20">
+            <div className="text-center py-12 bg-[#000000] rounded-xl border border-slate-800/20">
               <p className="text-[#b9c8de]">No roadmaps found</p>
             </div>
           )}
@@ -263,15 +263,15 @@ export default function Roadmaps() {
 
       {mode === 'practices' && !selectedPdfUrl && (
         <div className="space-y-6 mb-8">
-          <div className="bg-[#171f33] rounded-xl p-6 border border-slate-800/20">
-            <h2 className="text-xl font-bold text-[#dae2fd] mb-4">Browse Best Practices Guides (PDFs)</h2>
+          <div className="bg-[#000000] rounded-xl p-6 border border-slate-800/20">
+            <h2 className="text-xl font-bold text-[#B9B9B9] mb-4">Browse Best Practices Guides (PDFs)</h2>
             <div className="flex gap-3">
               <input
                 type="text"
                 value={searchPractices}
                 onChange={(e) => setSearchPractices(e.target.value)}
                 placeholder="Search best practices... (e.g., API, AWS, Performance)"
-                className="flex-1 px-4 py-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]"
+                className="flex-1 px-4 py-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]"
               />
               <button
                 onClick={() => setMode(null)}
@@ -288,7 +288,7 @@ export default function Roadmaps() {
               <button
                 key={practice.filename}
                 onClick={() => handleSelectPdf(practice)}
-                className="group bg-[#171f33] hover:bg-[#1a2236] rounded-xl p-6 border-2 border-[#adc6ff]/20 hover:border-[#adc6ff]/50 transition-all text-left"
+                className="group bg-[#000000] hover:bg-[#1a2236] rounded-xl p-6 border-2 border-[#adc6ff]/20 hover:border-[#adc6ff]/50 transition-all text-left"
               >
                 <div className="flex items-start justify-between mb-3">
                   <span className="material-symbols-outlined text-[#4edea3] text-3xl group-hover:scale-110 transition-transform">
@@ -298,7 +298,7 @@ export default function Roadmaps() {
                     download
                   </span>
                 </div>
-                <h3 className="font-semibold text-[#dae2fd] group-hover:text-[#adc6ff] transition-colors mb-1">
+                <h3 className="font-semibold text-[#B9B9B9] group-hover:text-[#adc6ff] transition-colors mb-1">
                   {practice.title}
                 </h3>
                 <p className="text-xs text-[#b9c8de]">Click to view PDF</p>
@@ -307,7 +307,7 @@ export default function Roadmaps() {
           </div>
 
           {filteredPractices.length === 0 && (
-            <div className="text-center py-12 bg-[#171f33] rounded-xl border border-slate-800/20">
+            <div className="text-center py-12 bg-[#000000] rounded-xl border border-slate-800/20">
               <p className="text-[#b9c8de]">No best practices found</p>
             </div>
           )}
@@ -317,17 +317,17 @@ export default function Roadmaps() {
       {selectedPdfUrl && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
           <div className="bg-[#0f1419] rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-auto shadow-2xl border border-slate-800/50 flex flex-col">
-            <div className="sticky top-0 bg-[#171f33] p-6 border-b border-slate-800/20 flex items-center justify-between">
-              <h2 className="text-2xl font-bold text-[#dae2fd]">{selectedPdfTitle}</h2>
+            <div className="sticky top-0 bg-[#000000] p-6 border-b border-slate-800/20 flex items-center justify-between">
+              <h2 className="text-2xl font-bold text-[#B9B9B9]">{selectedPdfTitle}</h2>
               <button
                 onClick={handleClosePdf}
-                className="material-symbols-outlined text-3xl text-[#b9c8de] hover:text-[#dae2fd] cursor-pointer"
+                className="material-symbols-outlined text-3xl text-[#b9c8de] hover:text-[#B9B9B9] cursor-pointer"
               >
                 close
               </button>
             </div>
 
-            <div className="flex-1 overflow-auto p-6 bg-[#131b2e]">
+            <div className="flex-1 overflow-auto p-6 bg-[#000000]">
               <embed
                 src={`${selectedPdfUrl}#toolbar=0&view=FitH`}
                 type="application/pdf"
@@ -336,7 +336,7 @@ export default function Roadmaps() {
               />
             </div>
 
-            <div className="border-t border-slate-800/20 p-6 flex gap-3 justify-end bg-[#171f33]">
+            <div className="border-t border-slate-800/20 p-6 flex gap-3 justify-end bg-[#000000]">
               <button
                 onClick={handleClosePdf}
                 className="px-6 py-2 rounded-lg border-2 border-[#adc6ff] text-[#adc6ff] hover:bg-[#adc6ff]/10 font-semibold transition-all"
@@ -358,10 +358,10 @@ export default function Roadmaps() {
 
       {roadmapData && mode === 'ai' && (
         <div className="space-y-8">
-          <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
+          <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <h2 className="text-2xl font-bold text-[#dae2fd]">{role}</h2>
+                <h2 className="text-2xl font-bold text-[#B9B9B9]">{role}</h2>
                 <p className="text-[#b9c8de]">8-week personalized roadmap</p>
               </div>
               <button
@@ -379,13 +379,13 @@ export default function Roadmaps() {
 
           <div className="space-y-4">
             {roadmapData.weeks?.map((week, idx) => (
-              <div key={idx} className="p-6 bg-[#171f33] rounded-lg border border-[#adc6ff]/20 hover:border-[#adc6ff]/40 transition-all">
+              <div key={idx} className="p-6 bg-[#000000] rounded-lg border border-[#adc6ff]/20 hover:border-[#adc6ff]/40 transition-all">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#4d8eff] to-[#adc6ff] text-white flex items-center justify-center font-bold shrink-0">
                     {idx + 1}
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg font-bold text-[#dae2fd] mb-3">{week.milestone}</h4>
+                    <h4 className="text-lg font-bold text-[#B9B9B9] mb-3">{week.milestone}</h4>
                     <ul className="space-y-2">
                       {(week.tasks || []).map((task, tIdx) => (
                         <li key={tIdx} className="flex items-center gap-2 text-[#c2c6d6]">

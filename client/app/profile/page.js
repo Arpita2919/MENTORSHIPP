@@ -33,19 +33,19 @@ export default function Profile() {
   return (
     <>
       <header className="mb-8">
-        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#dae2fd] mb-2">Profile Management</h1>
+        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#B9B9B9] mb-2">Profile Management</h1>
         <p className="text-[#b9c8de]">Manage your account settings and preferences</p>
       </header>
 
       <div className="grid grid-cols-12 gap-8 max-w-6xl">
         {/* Profile Card */}
         <div className="col-span-12 lg:col-span-4">
-          <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
+          <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
             <div className="flex flex-col items-center text-center mb-8">
               <div className="w-20 h-20 rounded-full bg-[#4d8eff]/20 flex items-center justify-center mb-4">
                 <span className="material-symbols-outlined text-[#adc6ff] text-5xl">person</span>
               </div>
-              <h2 className="text-2xl font-bold text-[#dae2fd]">{profile.name}</h2>
+              <h2 className="text-2xl font-bold text-[#B9B9B9]">{profile.name}</h2>
               <p className="text-[#b9c8de] text-sm mt-1">{profile.email}</p>
             </div>
 
@@ -97,8 +97,8 @@ export default function Profile() {
         {/* Edit Profile Form */}
         {editing && (
           <div className="col-span-12 lg:col-span-8">
-            <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
-              <h3 className="text-xl font-bold text-[#dae2fd] mb-6">Edit Profile</h3>
+            <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
+              <h3 className="text-xl font-bold text-[#B9B9B9] mb-6">Edit Profile</h3>
 
               <form className="space-y-6">
                 <div>
@@ -108,7 +108,7 @@ export default function Profile() {
                     name="name"
                     value={profile.name}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]"
+                    className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]"
                   />
                 </div>
 
@@ -119,7 +119,7 @@ export default function Profile() {
                     name="email"
                     value={profile.email}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]"
+                    className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]"
                   />
                 </div>
 
@@ -130,7 +130,7 @@ export default function Profile() {
                     name="currentRole"
                     value={profile.currentRole}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]"
+                    className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]"
                   />
                 </div>
 
@@ -141,7 +141,7 @@ export default function Profile() {
                     name="targetRole"
                     value={profile.targetRole}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]"
+                    className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]"
                   />
                 </div>
 
@@ -152,7 +152,7 @@ export default function Profile() {
                     name="yearsExperience"
                     value={profile.yearsExperience}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]"
+                    className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]"
                   />
                 </div>
 
@@ -179,38 +179,38 @@ export default function Profile() {
 
         {/* Account Settings */}
         <div className="col-span-12 lg:col-span-8">
-          <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20 space-y-6">
-            <h3 className="text-xl font-bold text-[#dae2fd]">Account Settings</h3>
+          <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20 space-y-6">
+            <h3 className="text-xl font-bold text-[#B9B9B9]">Account Settings</h3>
 
             <div className="space-y-4">
-              <button className="w-full flex items-center justify-between p-4 bg-[#131b2e] hover:bg-[#222a3d] rounded-lg transition-all">
+              <button className="w-full flex items-center justify-between p-4 bg-[#000000] hover:bg-[#222a3d] rounded-lg transition-all">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-[#adc6ff]">notification_important</span>
-                  <span className="text-[#dae2fd] font-semibold">Notifications</span>
+                  <span className="text-[#B9B9B9] font-semibold">Notifications</span>
                 </div>
                 <span className="material-symbols-outlined text-slate-500">chevron_right</span>
               </button>
 
-              <button className="w-full flex items-center justify-between p-4 bg-[#131b2e] hover:bg-[#222a3d] rounded-lg transition-all">
+              <button className="w-full flex items-center justify-between p-4 bg-[#000000] hover:bg-[#222a3d] rounded-lg transition-all">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-[#adc6ff]">security</span>
-                  <span className="text-[#dae2fd] font-semibold">Security & Privacy</span>
+                  <span className="text-[#B9B9B9] font-semibold">Security & Privacy</span>
                 </div>
                 <span className="material-symbols-outlined text-slate-500">chevron_right</span>
               </button>
 
-              <button className="w-full flex items-center justify-between p-4 bg-[#131b2e] hover:bg-[#222a3d] rounded-lg transition-all">
+              <button className="w-full flex items-center justify-between p-4 bg-[#000000] hover:bg-[#222a3d] rounded-lg transition-all">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-[#adc6ff]">palette</span>
-                  <span className="text-[#dae2fd] font-semibold">Appearance</span>
+                  <span className="text-[#B9B9B9] font-semibold">Appearance</span>
                 </div>
                 <span className="material-symbols-outlined text-slate-500">chevron_right</span>
               </button>
 
-              <button className="w-full flex items-center justify-between p-4 bg-[#131b2e] hover:bg-[#222a3d] rounded-lg transition-all">
+              <button className="w-full flex items-center justify-between p-4 bg-[#000000] hover:bg-[#222a3d] rounded-lg transition-all">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-[#adc6ff]">help</span>
-                  <span className="text-[#dae2fd] font-semibold">Help & Support</span>
+                  <span className="text-[#B9B9B9] font-semibold">Help & Support</span>
                 </div>
                 <span className="material-symbols-outlined text-slate-500">chevron_right</span>
               </button>

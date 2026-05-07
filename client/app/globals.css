@@ -11,14 +11,14 @@
 }
 
 :root {
-  --background: #0b1326;
-  --surface: #0b1326;
-  --surface-container: #171f33;
-  --surface-container-low: #131b2e;
+  --background: #000000;
+  --surface: #000000;
+  --surface-container: #000000;
+  --surface-container-low: #000000;
   --surface-container-high: #222a3d;
   --surface-container-highest: #2d3449;
-  --on-background: #dae2fd;
-  --on-surface: #dae2fd;
+  --on-background: #B9B9B9;
+  --on-surface: #B9B9B9;
   --primary: #adc6ff;
   --primary-container: #4d8eff;
   --secondary: #4edea3;
@@ -28,7 +28,7 @@
 html, body {
   height: 100%;
   width: 100%;
-  background-color: var(--background);
+  background-color: #000000;
   color: var(--on-background);
   font-family: 'Inter', sans-serif;
 }

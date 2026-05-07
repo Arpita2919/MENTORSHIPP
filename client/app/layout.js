@@ -22,15 +22,15 @@ export default function RootLayout({ children }) {
             --primary-container: #4d8eff;
             --on-tertiary: #233143;
             --primary-fixed: #d8e2ff;
-            --on-background: #dae2fd;
-            --surface-dim: #0b1326;
+            --on-background: #B9B9B9;
+            --surface-dim: #000000;
             --surface-tint: #adc6ff;
-            --on-surface: #dae2fd;
+            --on-surface: #B9B9B9;
             --primary: #adc6ff;
             --secondary: #4edea3;
-            --surface: #0b1326;
-            --surface-container: #171f33;
-            --surface-container-low: #131b2e;
+            --surface: #000000;
+            --surface-container: #000000;
+            --surface-container-low: #000000;
             --surface-container-high: #222a3d;
             --surface-container-highest: #2d3449;
           }
@@ -38,8 +38,8 @@ export default function RootLayout({ children }) {
             color-scheme: dark;
           }
           body {
-            background: #0b1326;
-            color: #dae2fd;
+            background: #000000;
+            color: #B9B9B9;
             font-family: Inter, sans-serif;
           }
           .material-symbols-outlined {
@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
           }
         `}</style>
       </head>
-      <body className="bg-[#0b1326] text-[#dae2fd]">
+      <body className="bg-[#000000] text-[#B9B9B9]">
         <AuthProvider>
           <ClientLayout>{children}</ClientLayout>
         </AuthProvider>

@@ -47,39 +47,39 @@ export default function ProfileAnalyzer() {
   return (
     <>
       <header className="mb-8">
-        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#dae2fd] mb-2">Smart Profile Analyzer</h1>
+        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#B9B9B9] mb-2">Smart Profile Analyzer</h1>
         <p className="text-[#b9c8de]">Analyze your profile and get placement probability predictions</p>
       </header>
 
       <div className="grid grid-cols-12 gap-8">
         {/* Input Section */}
         <div className="col-span-12 lg:col-span-5">
-          <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20 space-y-6 sticky top-8">
-            <h2 className="text-xl font-bold text-[#dae2fd]">Your Profile</h2>
+          <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20 space-y-6 sticky top-8">
+            <h2 className="text-xl font-bold text-[#B9B9B9]">Your Profile</h2>
 
             <div>
               <label className="block text-sm font-bold text-[#c2c6d6] uppercase tracking-widest mb-2">CGPA</label>
-              <input value={cgpa} onChange={(e) => setCgpa(e.target.value)} type="number" placeholder="e.g., 8.5" step="0.1" min="0" max="10" className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]" />
+              <input value={cgpa} onChange={(e) => setCgpa(e.target.value)} type="number" placeholder="e.g., 8.5" step="0.1" min="0" max="10" className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]" />
             </div>
 
             <div>
               <label className="block text-sm font-bold text-[#c2c6d6] uppercase tracking-widest mb-2">Skills (comma separated)</label>
-              <textarea value={skills} onChange={(e) => setSkills(e.target.value)} placeholder="e.g., Python, DSA, React, SQL" className="w-full h-20 p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]" />
+              <textarea value={skills} onChange={(e) => setSkills(e.target.value)} placeholder="e.g., Python, DSA, React, SQL" className="w-full h-20 p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]" />
             </div>
 
             <div>
               <label className="block text-sm font-bold text-[#c2c6d6] uppercase tracking-widest mb-2">Projects Completed</label>
-              <input value={projects} onChange={(e) => setProjects(e.target.value)} type="number" placeholder="e.g., 5" min="0" className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]" />
+              <input value={projects} onChange={(e) => setProjects(e.target.value)} type="number" placeholder="e.g., 5" min="0" className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]" />
             </div>
 
             <div>
               <label className="block text-sm font-bold text-[#c2c6d6] uppercase tracking-widest mb-2">Years of Experience</label>
-              <input value={experience} onChange={(e) => setExperience(e.target.value)} type="number" placeholder="e.g., 2" step="0.5" min="0" className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]" />
+              <input value={experience} onChange={(e) => setExperience(e.target.value)} type="number" placeholder="e.g., 2" step="0.5" min="0" className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]" />
             </div>
 
             <div>
               <label className="block text-sm font-bold text-[#c2c6d6] uppercase tracking-widest mb-2">Target Role</label>
-              <select value={targetRole} onChange={(e) => setTargetRole(e.target.value)} className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]">
+              <select value={targetRole} onChange={(e) => setTargetRole(e.target.value)} className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]">
                 <option>Software Engineer</option>
                 <option>Product Manager</option>
                 <option>Data Scientist</option>
@@ -98,8 +98,8 @@ export default function ProfileAnalyzer() {
         {analysis && (
           <div className="col-span-12 lg:col-span-7 space-y-6">
             {/* Placement Probability */}
-            <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
-              <h3 className="text-lg font-bold text-[#dae2fd] mb-6 flex items-center gap-2">
+            <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
+              <h3 className="text-lg font-bold text-[#B9B9B9] mb-6 flex items-center gap-2">
                 <span className="material-symbols-outlined text-[#4edea3]">trending_up</span>
                 Placement Probability
               </h3>
@@ -113,7 +113,7 @@ export default function ProfileAnalyzer() {
                 </div>
 
                 {/* Progress Bar */}
-                <div className="w-full bg-[#131b2e] rounded-full h-3 overflow-hidden border border-slate-700">
+                <div className="w-full bg-[#000000] rounded-full h-3 overflow-hidden border border-slate-700">
                   <div style={{ width: `${analysis.placement_probability}%` }} className="h-full bg-gradient-to-r from-[#4d8eff] to-[#4edea3] transition-all duration-500"></div>
                 </div>
               </div>
@@ -123,17 +123,17 @@ export default function ProfileAnalyzer() {
             </div>
 
             {/* Skill Gap Heatmap */}
-            <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
-              <h3 className="text-lg font-bold text-[#dae2fd] mb-6 flex items-center gap-2">
+            <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
+              <h3 className="text-lg font-bold text-[#B9B9B9] mb-6 flex items-center gap-2">
                 <span className="material-symbols-outlined text-[#adc6ff]">grid_3x3</span>
                 Skill Gap Analysis
               </h3>
 
               <div className="space-y-2 mb-6">
                 {analysis.skill_gap && analysis.skill_gap.map((gap, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-3 bg-[#131b2e] rounded-lg border border-red-500/20">
+                  <div key={idx} className="flex items-center gap-3 p-3 bg-[#000000] rounded-lg border border-red-500/20">
                     <span className="material-symbols-outlined text-red-400 text-sm">close</span>
-                    <span className="text-[#dae2fd]">{gap}</span>
+                    <span className="text-[#B9B9B9]">{gap}</span>
                   </div>
                 ))}
               </div>
@@ -145,7 +145,7 @@ export default function ProfileAnalyzer() {
 
             {/* Recommendations */}
             <div className="bg-gradient-to-br from-[#4edea3]/10 to-[#adc6ff]/10 rounded-xl p-8 border border-[#4edea3]/20">
-              <h3 className="text-lg font-bold text-[#dae2fd] mb-4 flex items-center gap-2">
+              <h3 className="text-lg font-bold text-[#B9B9B9] mb-4 flex items-center gap-2">
                 <span className="material-symbols-outlined text-[#4edea3]">lightbulb</span>
                 AI Recommendations
               </h3>
@@ -153,15 +153,15 @@ export default function ProfileAnalyzer() {
               <ul className="space-y-3">
                 <li className="flex gap-3">
                   <span className="text-[#4edea3] font-bold">→</span>
-                  <span className="text-[#dae2fd]">Focus on System Design and DSA fundamentals</span>
+                  <span className="text-[#B9B9B9]">Focus on System Design and DSA fundamentals</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#4edea3] font-bold">→</span>
-                  <span className="text-[#dae2fd]">Build 2 more full-stack projects for portfolio</span>
+                  <span className="text-[#B9B9B9]">Build 2 more full-stack projects for portfolio</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#4edea3] font-bold">→</span>
-                  <span className="text-[#dae2fd]">Join open-source to gain production experience</span>
+                  <span className="text-[#B9B9B9]">Join open-source to gain production experience</span>
                 </li>
               </ul>
             </div>
@@ -171,7 +171,7 @@ export default function ProfileAnalyzer() {
         {/* Empty State */}
         {!analysis && !loading && (
           <div className="col-span-12 lg:col-span-7">
-            <div className="bg-[#171f33] rounded-xl p-12 border border-slate-800/20 text-center">
+            <div className="bg-[#000000] rounded-xl p-12 border border-slate-800/20 text-center">
               <span className="material-symbols-outlined text-6xl text-[#adc6ff] opacity-50 block mb-4">person</span>
               <p className="text-[#b9c8de] text-lg">Fill in your profile details to get AI-powered analysis and recommendations</p>
             </div>

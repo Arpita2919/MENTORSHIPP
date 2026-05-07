@@ -23,13 +23,13 @@ export default function Dashboard() {
   return (
     <>
       <header className="mb-10">
-        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#dae2fd] mb-2">Executive Intelligence Console</h1>
+        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#B9B9B9] mb-2">Executive Intelligence Console</h1>
         <p className="text-[#b9c8de] body-md">Propelling your trajectory toward Lead Solutions Architect roles.</p>
       </header>
 
       <div className="grid grid-cols-12 gap-6 auto-rows-fr">
         {/* Placement Probability Gauge */}
-        <div className="col-span-12 lg:col-span-4 bg-[#131b2e] rounded-xl p-8 flex flex-col justify-center items-center relative overflow-hidden group">
+        <div className="col-span-12 lg:col-span-4 bg-[#000000] rounded-xl p-8 flex flex-col justify-center items-center relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#adc6ff] to-[#4edea3]"></div>
           <h3 className="text-[#c2c6d6] font-headline font-bold text-sm uppercase tracking-widest mb-8">Placement Probability</h3>
           <div className="relative w-48 h-48 flex items-center justify-center">
@@ -38,7 +38,7 @@ export default function Dashboard() {
               <circle className="text-[#4d8eff]" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" strokeDasharray="552.92" strokeDashoffset="176.93" strokeLinecap="round" strokeWidth="12"></circle>
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <span className="text-5xl font-extrabold font-headline text-[#dae2fd]">68%</span>
+              <span className="text-5xl font-extrabold font-headline text-[#B9B9B9]">68%</span>
               <span className="text-[10px] text-[#4edea3] font-bold uppercase tracking-tighter">+4% this week</span>
             </div>
           </div>
@@ -46,13 +46,13 @@ export default function Dashboard() {
         </div>
 
         {/* Skill Gap Heatmap */}
-        <div className="col-span-12 lg:col-span-8 bg-[#171f33] rounded-xl p-8 relative">
+        <div className="col-span-12 lg:col-span-8 bg-[#000000] rounded-xl p-8 relative">
           <div className="flex justify-between items-center mb-8">
             <h3 className="text-[#c2c6d6] font-headline font-bold text-sm uppercase tracking-widest">Skill Gap Heatmap</h3>
             <div className="flex gap-2">
               <span className="px-3 py-1 rounded-full bg-[#2d3449] text-[10px] font-bold text-[#adc6ff] tracking-wide">GOOGLE</span>
-              <span className="px-3 py-1 rounded-full bg-[#131b2e] text-[10px] font-bold text-slate-500 tracking-wide">AMAZON</span>
-              <span className="px-3 py-1 rounded-full bg-[#131b2e] text-[10px] font-bold text-slate-500 tracking-wide">META</span>
+              <span className="px-3 py-1 rounded-full bg-[#000000] text-[10px] font-bold text-slate-500 tracking-wide">AMAZON</span>
+              <span className="px-3 py-1 rounded-full bg-[#000000] text-[10px] font-bold text-slate-500 tracking-wide">META</span>
             </div>
           </div>
           <div className="grid grid-cols-5 gap-4">
@@ -87,7 +87,7 @@ export default function Dashboard() {
         </div>
 
         {/* Company Fit Scores */}
-        <div className="col-span-12 lg:col-span-5 bg-[#131b2e] rounded-xl p-8">
+        <div className="col-span-12 lg:col-span-5 bg-[#000000] rounded-xl p-8">
           <h3 className="text-[#c2c6d6] font-headline font-bold text-sm uppercase tracking-widest mb-6">Company Fit Scores</h3>
           <div className="space-y-6">
             {[
@@ -101,7 +101,7 @@ export default function Dashboard() {
                     <span className="material-symbols-outlined text-[#adc6ff]">corporate_fare</span>
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[#dae2fd]">{item.company}</p>
+                    <p className="text-sm font-bold text-[#B9B9B9]">{item.company}</p>
                     <p className="text-[10px] text-slate-500">{item.role}</p>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ export default function Dashboard() {
               <div className="w-2 h-2 rounded-full bg-[#4edea3] ai-pulse"></div>
             </div>
             <div className="my-4">
-              <p className="text-3xl font-headline font-extrabold text-[#dae2fd]">Synchronized</p>
+              <p className="text-3xl font-headline font-extrabold text-[#B9B9B9]">Synchronized</p>
               <p className="text-[10px] text-slate-400 mt-1">Last neural update: 14 mins ago</p>
             </div>
             <div className="flex gap-1 mt-2">
@@ -149,13 +149,13 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="col-span-2 bg-[#131b2e] rounded-xl p-6 flex items-center justify-between">
+          <div className="col-span-2 bg-[#000000] rounded-xl p-6 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400">
                 <span className="material-symbols-outlined text-3xl">local_fire_department</span>
               </div>
               <div>
-                <p className="text-2xl font-extrabold font-headline text-[#dae2fd]">14 Day Streak</p>
+                <p className="text-2xl font-extrabold font-headline text-[#B9B9B9]">14 Day Streak</p>
                 <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">You are in the top 2% of candidates</p>
               </div>
             </div>
@@ -172,13 +172,13 @@ export default function Dashboard() {
         {/* Mentor Nudge */}
         {nudge && (
           <div className="col-span-12 rounded-xl p-6 border-l-4 border-[#adc6ff] bg-[#adc6ff]/10">
-            <p className="text-sm font-bold capitalize text-[#dae2fd]">{nudge.nudge_type} Message</p>
+            <p className="text-sm font-bold capitalize text-[#B9B9B9]">{nudge.nudge_type} Message</p>
             <p className="text-sm text-[#c2c6d6]">{nudge.message}</p>
           </div>
         )}
 
         {/* Recent Activity */}
-        <div className="col-span-12 bg-[#171f33] rounded-xl p-8">
+        <div className="col-span-12 bg-[#000000] rounded-xl p-8">
           <h3 className="text-[#c2c6d6] font-headline font-bold text-sm uppercase tracking-widest mb-8">AI-Driven Strategic Adjustments</h3>
           <div className="space-y-0">
             {[
@@ -192,7 +192,7 @@ export default function Dashboard() {
                 </div>
                 <div className="flex-1">
                   <div className="flex justify-between mb-1">
-                    <h4 className="text-sm font-bold text-[#dae2fd]">{item.title}</h4>
+                    <h4 className="text-sm font-bold text-[#B9B9B9]">{item.title}</h4>
                     <span className="text-[10px] text-slate-500 font-medium">{item.time}</span>
                   </div>
                   <p className="text-xs text-[#c2c6d6] leading-relaxed">{item.desc}</p>

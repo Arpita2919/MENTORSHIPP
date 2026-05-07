@@ -140,14 +140,14 @@ export default function MentorChat() {
   return (
     <>
       <header className="mb-8">
-        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#dae2fd] mb-2">AI Mentor Chat</h1>
+        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#B9B9B9] mb-2">AI Mentor Chat</h1>
         <p className="text-[#b9c8de]">Context-aware mentoring with memory and personalized guidance</p>
       </header>
 
       <div className="grid grid-cols-12 gap-8">
         {/* Chat Section */}
         <div className="col-span-12 lg:col-span-8">
-          <div className="bg-[#171f33] rounded-xl border border-slate-800/20 overflow-hidden flex flex-col h-96 lg:h-[600px]">
+          <div className="bg-[#000000] rounded-xl border border-slate-800/20 overflow-hidden flex flex-col h-96 lg:h-[600px]">
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-6 space-y-4">
               {messages.map((msg) => (
@@ -156,7 +156,7 @@ export default function MentorChat() {
                     className={`max-w-xs lg:max-w-md px-4 py-3 rounded-lg ${
                       msg.type === 'user'
                         ? 'bg-[#4edea3] text-white rounded-br-none'
-                        : 'bg-[#131b2e] text-[#dae2fd] rounded-bl-none border border-slate-700'
+                        : 'bg-[#000000] text-[#B9B9B9] rounded-bl-none border border-slate-700'
                     }`}
                   >
                     <p className="text-sm">{msg.text}</p>
@@ -166,7 +166,7 @@ export default function MentorChat() {
 
               {loading && (
                 <div className="flex justify-start">
-                  <div className="bg-[#131b2e] text-[#dae2fd] px-4 py-3 rounded-lg rounded-bl-none border border-slate-700">
+                  <div className="bg-[#000000] text-[#B9B9B9] px-4 py-3 rounded-lg rounded-bl-none border border-slate-700">
                     <div className="flex gap-2">
                       <span className="w-2 h-2 rounded-full bg-[#adc6ff] animate-bounce"></span>
                       <span className="w-2 h-2 rounded-full bg-[#adc6ff] animate-bounce" style={{ animationDelay: '0.2s' }}></span>
@@ -180,7 +180,7 @@ export default function MentorChat() {
             </div>
 
             {/* Input Area */}
-            <div className="border-t border-slate-800/20 p-4 bg-[#131b2e]">
+            <div className="border-t border-slate-800/20 p-4 bg-[#000000]">
               <div className="flex gap-2">
                 <input
                   value={input}
@@ -192,7 +192,7 @@ export default function MentorChat() {
                     }
                   }}
                   placeholder="Ask your mentor anything..."
-                  className="flex-1 p-3 bg-[#0b1326] border border-slate-700 rounded-lg text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]"
+                  className="flex-1 p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]"
                 />
                 <button
                   onClick={handleSendMessage}
@@ -209,8 +209,8 @@ export default function MentorChat() {
         {/* Sidebar */}
         <div className="col-span-12 lg:col-span-4 space-y-6">
           {/* Quick Actions */}
-          <div className="bg-[#171f33] rounded-xl p-6 border border-slate-800/20">
-            <h3 className="text-lg font-bold text-[#dae2fd] mb-4 flex items-center gap-2">
+          <div className="bg-[#000000] rounded-xl p-6 border border-slate-800/20">
+            <h3 className="text-lg font-bold text-[#B9B9B9] mb-4 flex items-center gap-2">
               <span className="material-symbols-outlined">touch_app</span>
               Quick Actions
             </h3>
@@ -220,7 +220,7 @@ export default function MentorChat() {
                 <button
                   key={idx}
                   onClick={() => handleQuickAction(action)}
-                  className="w-full px-4 py-3 bg-[#131b2e] hover:bg-[#1a2539] border border-slate-700 rounded-lg text-[#dae2fd] transition-all text-left flex items-center gap-3"
+                  className="w-full px-4 py-3 bg-[#000000] hover:bg-[#1a2539] border border-slate-700 rounded-lg text-[#B9B9B9] transition-all text-left flex items-center gap-3"
                 >
                   <span className="text-xl">{action.emoji}</span>
                   <span className="text-sm font-semibold">{action.label}</span>
@@ -230,25 +230,25 @@ export default function MentorChat() {
           </div>
 
           {/* Context */}
-          <div className="bg-[#171f33] rounded-xl p-6 border border-slate-800/20">
-            <h3 className="text-lg font-bold text-[#dae2fd] mb-4 flex items-center gap-2">
+          <div className="bg-[#000000] rounded-xl p-6 border border-slate-800/20">
+            <h3 className="text-lg font-bold text-[#B9B9B9] mb-4 flex items-center gap-2">
               <span className="material-symbols-outlined text-[#adc6ff]">memory</span>
               Your Context
             </h3>
 
             <div className="space-y-3 text-sm text-[#c2c6d6]">
               <div>
-                <p className="font-semibold text-[#dae2fd] mb-1">Last Session</p>
+                <p className="font-semibold text-[#B9B9B9] mb-1">Last Session</p>
                 <p>Worked on System Design</p>
               </div>
 
               <div>
-                <p className="font-semibold text-[#dae2fd] mb-1">Weak Topics</p>
+                <p className="font-semibold text-[#B9B9B9] mb-1">Weak Topics</p>
                 <p>Dynamic Programming, Heaps</p>
               </div>
 
               <div>
-                <p className="font-semibold text-[#dae2fd] mb-1">Achievements</p>
+                <p className="font-semibold text-[#B9B9B9] mb-1">Achievements</p>
                 <p>5-day streak ⭐</p>
               </div>
             </div>
@@ -256,7 +256,7 @@ export default function MentorChat() {
 
           {/* Motivation */}
           <div className="bg-gradient-to-br from-[#adc6ff]/10 to-[#4edea3]/10 rounded-xl p-6 border border-[#adc6ff]/20">
-            <p className="text-sm text-[#dae2fd]">
+            <p className="text-sm text-[#B9B9B9]">
               <span className="font-bold">💡 Did you know?</span> Students who practice with structured mentoring improve their placement chances by 3x. Keep grinding!
             </p>
           </div>

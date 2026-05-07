@@ -46,14 +46,14 @@ export default function CompanyIntelligence() {
   return (
     <>
       <header className="mb-8">
-        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#dae2fd] mb-2">Company Intelligence</h1>
+        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#B9B9B9] mb-2">Company Intelligence</h1>
         <p className="text-[#b9c8de]">Hiring patterns, interview difficulty, and preparation paths</p>
       </header>
 
       <div className="grid grid-cols-12 gap-8">
         {/* Company Selector */}
         <div className="col-span-12">
-          <div className="bg-[#171f33] rounded-xl p-6 border border-slate-800/20">
+          <div className="bg-[#000000] rounded-xl p-6 border border-slate-800/20">
             <h3 className="text-sm font-bold text-[#c2c6d6] uppercase tracking-widest mb-4">Select Company</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
               {companies.map((company) => (
@@ -67,7 +67,7 @@ export default function CompanyIntelligence() {
                   }`}
                 >
                   <span className="text-2xl">{company.logo}</span>
-                  <span className="text-xs font-bold text-[#dae2fd]">{company.name}</span>
+                  <span className="text-xs font-bold text-[#B9B9B9]">{company.name}</span>
                   <span className={`text-xs font-semibold ${company.difficulty > 7 ? 'text-red-400' : company.difficulty > 5 ? 'text-yellow-400' : 'text-[#4edea3]'}`}>
                     {company.difficulty}/10
                   </span>
@@ -79,9 +79,9 @@ export default function CompanyIntelligence() {
 
         {/* Target Role Selector */}
         <div className="col-span-12">
-          <div className="bg-[#171f33] rounded-xl p-6 border border-slate-800/20">
+          <div className="bg-[#000000] rounded-xl p-6 border border-slate-800/20">
             <label className="block text-sm font-bold text-[#c2c6d6] uppercase tracking-widest mb-3">Target Role</label>
-            <select value={targetRole} onChange={(e) => setTargetRole(e.target.value)} className="w-full md:w-64 p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]">
+            <select value={targetRole} onChange={(e) => setTargetRole(e.target.value)} className="w-full md:w-64 p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]">
               <option>Software Engineer</option>
               <option>Senior Engineer</option>
               <option>Product Manager</option>
@@ -96,8 +96,8 @@ export default function CompanyIntelligence() {
           <>
             {/* Difficulty Meter */}
             <div className="col-span-12 md:col-span-6">
-              <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
-                <h3 className="text-lg font-bold text-[#dae2fd] mb-6 flex items-center gap-2">
+              <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
+                <h3 className="text-lg font-bold text-[#B9B9B9] mb-6 flex items-center gap-2">
                   <span className="material-symbols-outlined text-[#adc6ff]">speed</span>
                   Difficulty Level
                 </h3>
@@ -107,7 +107,7 @@ export default function CompanyIntelligence() {
                     <span className="text-sm font-bold text-[#c2c6d6]">Interview Difficulty</span>
                     <span className="text-2xl font-black text-[#4d8eff]">{intelligence.difficulty}/10</span>
                   </div>
-                  <div className="w-full bg-[#131b2e] rounded-full h-3 overflow-hidden border border-slate-700">
+                  <div className="w-full bg-[#000000] rounded-full h-3 overflow-hidden border border-slate-700">
                     <div style={{ width: `${intelligence.difficulty * 10}%` }} className={`h-full transition-all duration-500 ${intelligence.difficulty > 7 ? 'bg-red-500' : intelligence.difficulty > 5 ? 'bg-yellow-500' : 'bg-[#4edea3]'}`}></div>
                   </div>
                 </div>
@@ -118,8 +118,8 @@ export default function CompanyIntelligence() {
 
             {/* Hiring Rate */}
             <div className="col-span-12 md:col-span-6">
-              <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
-                <h3 className="text-lg font-bold text-[#dae2fd] mb-6 flex items-center gap-2">
+              <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
+                <h3 className="text-lg font-bold text-[#B9B9B9] mb-6 flex items-center gap-2">
                   <span className="material-symbols-outlined text-[#4edea3]">trending_up</span>
                   Hiring Metrics
                 </h3>
@@ -139,8 +139,8 @@ export default function CompanyIntelligence() {
 
             {/* Prep Roadmap */}
             <div className="col-span-12">
-              <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
-                <h3 className="text-lg font-bold text-[#dae2fd] mb-6 flex items-center gap-2">
+              <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
+                <h3 className="text-lg font-bold text-[#B9B9B9] mb-6 flex items-center gap-2">
                   <span className="material-symbols-outlined text-[#4d8eff]">map</span>
                   Preparation Roadmap for {selectedCompany}
                 </h3>
@@ -152,14 +152,14 @@ export default function CompanyIntelligence() {
                     { week: 'Week 5-6', focus: intelligence.pattern.includes('DSA') ? 'System Design' : 'Behavioral Prep', tasks: ['Design Twitter/YouTube', 'Mock interviews'] },
                     { week: 'Week 7-8', focus: 'Final Prep & Mock Interviews', tasks: ['Full mock interviews', 'Review weak areas', 'Company-specific prep'] },
                   ].map((stage, idx) => (
-                    <div key={idx} className="p-6 bg-[#131b2e] rounded-lg border border-[#adc6ff]/20 hover:border-[#adc6ff]/40 transition-all">
+                    <div key={idx} className="p-6 bg-[#000000] rounded-lg border border-[#adc6ff]/20 hover:border-[#adc6ff]/40 transition-all">
                       <div className="flex items-start gap-4">
                         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#4d8eff] to-[#adc6ff] text-white flex items-center justify-center font-bold shrink-0">
                           {idx + 1}
                         </div>
                         <div className="flex-1">
                           <p className="text-xs font-bold text-[#adc6ff] uppercase tracking-widest mb-1">{stage.week}</p>
-                          <h4 className="text-lg font-bold text-[#dae2fd] mb-2">{stage.focus}</h4>
+                          <h4 className="text-lg font-bold text-[#B9B9B9] mb-2">{stage.focus}</h4>
                           <ul className="space-y-1">
                             {stage.tasks.map((task, tIdx) => (
                               <li key={tIdx} className="text-sm text-[#c2c6d6] flex items-center gap-2">
@@ -179,7 +179,7 @@ export default function CompanyIntelligence() {
             {/* Recommendation */}
             <div className="col-span-12">
               <div className="bg-gradient-to-r from-[#4edea3]/10 to-[#adc6ff]/10 rounded-xl p-8 border border-[#4edea3]/20">
-                <h3 className="text-lg font-bold text-[#dae2fd] mb-3 flex items-center gap-2">
+                <h3 className="text-lg font-bold text-[#B9B9B9] mb-3 flex items-center gap-2">
                   <span className="material-symbols-outlined text-[#4edea3]">recommendation</span>
                   AI Recommendation
                 </h3>
@@ -191,7 +191,7 @@ export default function CompanyIntelligence() {
 
         {loading && (
           <div className="col-span-12">
-            <div className="bg-[#171f33] rounded-xl p-12 border border-slate-800/20 text-center">
+            <div className="bg-[#000000] rounded-xl p-12 border border-slate-800/20 text-center">
               <span className="material-symbols-outlined text-4xl text-[#adc6ff] animate-spin block mb-4">autorenew</span>
               <p className="text-[#b9c8de]">Fetching company intelligence...</p>
             </div>
@@ -200,7 +200,7 @@ export default function CompanyIntelligence() {
 
         {!intelligence && !loading && (
           <div className="col-span-12">
-            <div className="bg-[#171f33] rounded-xl p-12 border border-slate-800/20 text-center">
+            <div className="bg-[#000000] rounded-xl p-12 border border-slate-800/20 text-center">
               <span className="material-symbols-outlined text-6xl text-[#adc6ff] opacity-50 block mb-4">business</span>
               <p className="text-[#b9c8de] text-lg">Select a company to view detailed intelligence and preparation roadmap</p>
             </div>

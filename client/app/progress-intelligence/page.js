@@ -75,15 +75,15 @@ export default function ProgressIntelligence() {
   return (
     <>
       <header className="mb-8">
-        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#dae2fd] mb-2">Progress Intelligence</h1>
+        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#B9B9B9] mb-2">Progress Intelligence</h1>
         <p className="text-[#b9c8de]">Real-time placement prediction and predictive analytics</p>
       </header>
 
       <div className="grid grid-cols-12 gap-8">
         {/* Input Section */}
         <div className="col-span-12 lg:col-span-4">
-          <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20 space-y-6 sticky top-24">
-            <h2 className="text-xl font-bold text-[#dae2fd]">Track Progress</h2>
+          <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20 space-y-6 sticky top-24">
+            <h2 className="text-xl font-bold text-[#B9B9B9]">Track Progress</h2>
 
             <div>
               <label className="block text-sm font-bold text-[#c2c6d6] uppercase tracking-widest mb-2">Tasks Completed</label>
@@ -91,7 +91,7 @@ export default function ProgressIntelligence() {
                 value={tasksCompleted}
                 onChange={(e) => setTasksCompleted(e.target.value)}
                 type="number"
-                className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]"
+                className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]"
               />
             </div>
 
@@ -101,7 +101,7 @@ export default function ProgressIntelligence() {
                 value={totalTasks}
                 onChange={(e) => setTotalTasks(e.target.value)}
                 type="number"
-                className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]"
+                className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]"
               />
             </div>
 
@@ -111,7 +111,7 @@ export default function ProgressIntelligence() {
                 value={daysActive}
                 onChange={(e) => setDaysActive(e.target.value)}
                 type="number"
-                className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]"
+                className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]"
               />
             </div>
 
@@ -121,7 +121,7 @@ export default function ProgressIntelligence() {
                 value={totalDays}
                 onChange={(e) => setTotalDays(e.target.value)}
                 type="number"
-                className="w-full p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] focus:outline-none focus:border-[#adc6ff]"
+                className="w-full p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] focus:outline-none focus:border-[#adc6ff]"
               />
             </div>
 
@@ -140,8 +140,8 @@ export default function ProgressIntelligence() {
         {prediction && (
           <div className="col-span-12 lg:col-span-8 space-y-6">
             {/* Placement Prediction */}
-            <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
-              <h3 className="text-lg font-bold text-[#dae2fd] mb-6 flex items-center gap-2">
+            <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
+              <h3 className="text-lg font-bold text-[#B9B9B9] mb-6 flex items-center gap-2">
                 <span className="material-symbols-outlined text-[#4edea3]">target</span>
                 Placement Prediction
               </h3>
@@ -152,7 +152,7 @@ export default function ProgressIntelligence() {
                   <span className="text-lg font-bold text-[#4edea3]">{prediction.trend}</span>
                 </div>
 
-                <div className="w-full bg-[#131b2e] rounded-full h-4 overflow-hidden border border-slate-700">
+                <div className="w-full bg-[#000000] rounded-full h-4 overflow-hidden border border-slate-700">
                   <div style={{ width: `${prediction.current_placement_chance}%` }} className="h-full bg-gradient-to-r from-[#4d8eff] to-[#4edea3] transition-all duration-500"></div>
                 </div>
               </div>
@@ -162,12 +162,12 @@ export default function ProgressIntelligence() {
 
             {/* Metrics */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[#171f33] rounded-xl p-6 border border-slate-800/20">
+              <div className="bg-[#000000] rounded-xl p-6 border border-slate-800/20">
                 <p className="text-xs font-bold text-[#c2c6d6] uppercase tracking-widest mb-2">Completion Rate</p>
                 <p className="text-4xl font-black text-[#adc6ff]">{prediction.completion_rate}</p>
               </div>
 
-              <div className="bg-[#171f33] rounded-xl p-6 border border-slate-800/20">
+              <div className="bg-[#000000] rounded-xl p-6 border border-slate-800/20">
                 <p className="text-xs font-bold text-[#c2c6d6] uppercase tracking-widest mb-2">Consistency Rate</p>
                 <p className="text-4xl font-black text-[#4edea3]">{prediction.consistency_rate}</p>
               </div>
@@ -175,8 +175,8 @@ export default function ProgressIntelligence() {
 
             {/* Risk Assessment */}
             {risks && (
-              <div className={`bg-[#171f33] rounded-xl p-8 border ${risks.risk_level === 'high' ? 'border-red-500/40' : risks.risk_level === 'medium' ? 'border-yellow-500/40' : 'border-[#4edea3]/40'}`}>
-                <h3 className="text-lg font-bold text-[#dae2fd] mb-4 flex items-center gap-2">
+              <div className={`bg-[#000000] rounded-xl p-8 border ${risks.risk_level === 'high' ? 'border-red-500/40' : risks.risk_level === 'medium' ? 'border-yellow-500/40' : 'border-[#4edea3]/40'}`}>
+                <h3 className="text-lg font-bold text-[#B9B9B9] mb-4 flex items-center gap-2">
                   <span className={`material-symbols-outlined ${risks.risk_level === 'high' ? 'text-red-400' : risks.risk_level === 'medium' ? 'text-yellow-400' : 'text-[#4edea3]'}`}>
                     {risks.risk_level === 'high' ? 'warning' : risks.risk_level === 'medium' ? 'info' : 'verified'}
                   </span>
@@ -186,7 +186,7 @@ export default function ProgressIntelligence() {
                 {risks.alerts && risks.alerts.length > 0 ? (
                   <ul className="space-y-2">
                     {risks.alerts.map((alert, idx) => (
-                      <li key={idx} className="text-sm text-[#dae2fd]">
+                      <li key={idx} className="text-sm text-[#B9B9B9]">
                         {alert}
                       </li>
                     ))}
@@ -199,15 +199,15 @@ export default function ProgressIntelligence() {
 
             {/* Tips */}
             <div className="bg-gradient-to-br from-[#adc6ff]/10 to-[#4edea3]/10 rounded-xl p-8 border border-[#adc6ff]/20">
-              <h3 className="text-lg font-bold text-[#dae2fd] mb-4 flex items-center gap-2">
+              <h3 className="text-lg font-bold text-[#B9B9B9] mb-4 flex items-center gap-2">
                 <span className="material-symbols-outlined text-[#adc6ff]">lightbulb</span>
                 Recommendations
               </h3>
 
               <ul className="space-y-2">
-                <li className="text-sm text-[#dae2fd]">→ Maintain consistency - 6+ active days per week</li>
-                <li className="text-sm text-[#dae2fd]">→ Focus on System Design topics this week</li>
-                <li className="text-sm text-[#dae2fd]">→ Complete at least 10 mock interviews before deadline</li>
+                <li className="text-sm text-[#B9B9B9]">→ Maintain consistency - 6+ active days per week</li>
+                <li className="text-sm text-[#B9B9B9]">→ Focus on System Design topics this week</li>
+                <li className="text-sm text-[#B9B9B9]">→ Complete at least 10 mock interviews before deadline</li>
               </ul>
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function ProgressIntelligence() {
 
         {!prediction && !loading && (
           <div className="col-span-12 lg:col-span-8">
-            <div className="bg-[#171f33] rounded-xl p-12 border border-slate-800/20 text-center">
+            <div className="bg-[#000000] rounded-xl p-12 border border-slate-800/20 text-center">
               <span className="material-symbols-outlined text-6xl text-[#adc6ff] opacity-50 block mb-4">trending_up</span>
               <p className="text-[#b9c8de] text-lg">Enter your progress metrics to get AI-powered placement predictions</p>
             </div>

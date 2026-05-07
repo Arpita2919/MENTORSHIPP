@@ -18,7 +18,7 @@ Standard UI relies on borders to separate thoughts. This system forbids it. **1p
 
 ### Surface Hierarchy & Nesting
 Treat the interface as a physical stack of semi-translucent materials.
-*   **Base:** `surface` (#0b1326) acts as the infinite void.
+*   **Base:** `surface` (#000000) acts as the infinite void.
 *   **The Stack:** Use the `surface-container` tiers to pull elements forward. For instance, a profile dashboard uses `surface-container-lowest` for the main canvas, while active AI insight cards use `surface-container-highest` to "float" toward the user.
 *   **The Glass & Gradient Rule:** For hero sections and primary AI interactions, use a backdrop-blur (12px–20px) combined with `surface-variant` at 60% opacity. Apply a subtle linear gradient from `primary` (#adc6ff) to `primary-container` (#4d8eff) at a 5% opacity overlay to give the surface a "charged" feel.
 
@@ -72,7 +72,7 @@ Depth is a functional tool, not a decoration. We achieve it through **Tonal Laye
 
 ### Don't
 *   **Don't** use standard "Drop Shadows" from a UI kit. They look cheap. Use our Ambient Shadow spec.
-*   **Don't** use 100% white for text. Use `on-surface` (#dae2fd) to maintain the midnight aesthetic and reduce eye strain.
+*   **Don't** use 100% white for text. Use `on-surface` (#B9B9B9) to maintain the midnight aesthetic and reduce eye strain.
 *   **Don't** use sharp corners. Everything must adhere to the `DEFAULT` (8px) or `md` (12px) radii to feel approachable yet modern.
 
 ---

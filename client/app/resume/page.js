@@ -135,15 +135,15 @@ export default function ResumeLab() {
   return (
     <>
       <header className="mb-8">
-        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#dae2fd] mb-2">Resume Intelligence Lab</h1>
+        <h1 className="text-4xl font-extrabold font-headline tracking-tight text-[#B9B9B9] mb-2">Resume Intelligence Lab</h1>
         <p className="text-[#b9c8de]">AI-powered resume optimization, ATS analysis, and keyword enhancement</p>
       </header>
 
       <div className="grid grid-cols-12 gap-8">
         {/* Upload Section */}
         <div className="col-span-12 lg:col-span-5">
-          <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20 space-y-6 sticky top-24">
-            <h2 className="text-xl font-bold text-[#dae2fd]">Upload Resume</h2>
+          <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20 space-y-6 sticky top-24">
+            <h2 className="text-xl font-bold text-[#B9B9B9]">Upload Resume</h2>
 
             <div
               onClick={() => document.getElementById('fileInput')?.click()}
@@ -151,14 +151,14 @@ export default function ResumeLab() {
             >
               <input id="fileInput" type="file" accept=".pdf,.docx,.txt" onChange={handleFileUpload} className="hidden" />
               <span className="material-symbols-outlined text-5xl text-[#adc6ff] mb-2 block opacity-70">cloud_upload</span>
-              <p className="text-[#dae2fd] font-semibold mb-1">Drop your resume here</p>
+              <p className="text-[#B9B9B9] font-semibold mb-1">Drop your resume here</p>
               <p className="text-xs text-[#b9c8de]">or click to browse (PDF, DOCX, TXT)</p>
             </div>
 
             {resumeFile && (
               <div className="p-3 bg-[#4edea3]/10 border border-[#4edea3]/20 rounded-lg flex items-center gap-2">
                 <span className="material-symbols-outlined text-[#4edea3]">check_circle</span>
-                <span className="text-sm text-[#dae2fd] font-semibold">{resumeFile.name}</span>
+                <span className="text-sm text-[#B9B9B9] font-semibold">{resumeFile.name}</span>
               </div>
             )}
 
@@ -168,7 +168,7 @@ export default function ResumeLab() {
                 value={resumeText}
                 onChange={(e) => setResumeText(e.target.value)}
                 placeholder="Paste your resume content here..."
-                className="w-full h-32 p-3 bg-[#131b2e] border border-slate-700 rounded-lg text-[#dae2fd] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]"
+                className="w-full h-32 p-3 bg-[#000000] border border-slate-700 rounded-lg text-[#B9B9B9] placeholder-slate-500 focus:outline-none focus:border-[#adc6ff]"
               />
             </div>
 
@@ -187,8 +187,8 @@ export default function ResumeLab() {
         {result && (
           <div className="col-span-12 lg:col-span-7 space-y-6">
             {/* ATS Score */}
-            <div className="bg-[#171f33] rounded-xl p-8 border border-slate-800/20">
-              <h3 className="text-lg font-bold text-[#dae2fd] mb-6 flex items-center gap-2">
+            <div className="bg-[#000000] rounded-xl p-8 border border-slate-800/20">
+              <h3 className="text-lg font-bold text-[#B9B9B9] mb-6 flex items-center gap-2">
                 <span className="material-symbols-outlined text-[#adc6ff]">fact_check</span>
                 ATS Compatibility Score
               </h3>
@@ -201,7 +201,7 @@ export default function ResumeLab() {
                   </span>
                 </div>
 
-                <div className="w-full bg-[#131b2e] rounded-full h-3 overflow-hidden border border-slate-700">
+                <div className="w-full bg-[#000000] rounded-full h-3 overflow-hidden border border-slate-700">
                   <div style={{ width: `${result.atsScore}%` }} className="h-full bg-gradient-to-r from-[#4d8eff] to-[#4edea3] transition-all duration-500"></div>
                 </div>
               </div>
@@ -216,7 +216,7 @@ export default function ResumeLab() {
             </div>
 
             {/* Tabs */}
-            <div className="bg-[#171f33] rounded-xl border border-slate-800/20 overflow-hidden">
+            <div className="bg-[#000000] rounded-xl border border-slate-800/20 overflow-hidden">
               <div className="flex border-b border-slate-800/20">
                 {[
                   { id: 'analysis', label: 'Keywords & Analysis' },
@@ -229,7 +229,7 @@ export default function ResumeLab() {
                     className={`flex-1 px-6 py-4 text-sm font-bold uppercase tracking-widest transition-all ${
                       activeTab === tab.id
                         ? 'text-[#adc6ff] border-b-2 border-[#adc6ff]'
-                        : 'text-[#b9c8de] hover:text-[#dae2fd]'
+                        : 'text-[#b9c8de] hover:text-[#B9B9B9]'
                     }`}
                   >
                     {tab.label}
@@ -272,7 +272,7 @@ export default function ResumeLab() {
                       <div>
                         <p className="text-sm font-bold text-[#4edea3] uppercase tracking-widest mb-2">Strengths</p>
                         {result.strengths.map((s, idx) => (
-                          <p key={idx} className="text-sm text-[#dae2fd] mb-1">
+                          <p key={idx} className="text-sm text-[#B9B9B9] mb-1">
                             {s}
                           </p>
                         ))}
@@ -284,7 +284,7 @@ export default function ResumeLab() {
                       {result.improvements?.map((imp, idx) => (
                         <div key={idx} className="flex gap-2 mb-2">
                           <span className="text-[#adc6ff]">→</span>
-                          <p className="text-sm text-[#dae2fd]">{imp}</p>
+                          <p className="text-sm text-[#B9B9B9]">{imp}</p>
                         </div>
                       ))}
                     </div>
@@ -295,12 +295,12 @@ export default function ResumeLab() {
                 {activeTab === 'bullets' && (
                   <div className="space-y-4">
                     {result.bulletImprovements?.map((bullet, idx) => (
-                      <div key={idx} className="p-4 bg-[#131b2e] rounded-lg border border-slate-700">
+                      <div key={idx} className="p-4 bg-[#000000] rounded-lg border border-slate-700">
                         <p className="text-xs font-bold text-red-400 uppercase tracking-widest mb-2">Before</p>
-                        <p className="text-sm text-[#dae2fd] mb-3 italic">{bullet.original}</p>
+                        <p className="text-sm text-[#B9B9B9] mb-3 italic">{bullet.original}</p>
 
                         <p className="text-xs font-bold text-[#4edea3] uppercase tracking-widest mb-2">After</p>
-                        <p className="text-sm text-[#dae2fd] font-semibold">{bullet.improved}</p>
+                        <p className="text-sm text-[#B9B9B9] font-semibold">{bullet.improved}</p>
                       </div>
                     ))}
                   </div>
@@ -322,7 +322,7 @@ export default function ResumeLab() {
         {/* Empty State */}
         {!result && !loading && (
           <div className="col-span-12 lg:col-span-7">
-            <div className="bg-[#171f33] rounded-xl p-12 border border-slate-800/20 text-center">
+            <div className="bg-[#000000] rounded-xl p-12 border border-slate-800/20 text-center">
               <span className="material-symbols-outlined text-6xl text-[#adc6ff] opacity-50 block mb-4">description</span>
               <p className="text-[#b9c8de] text-lg">Upload or paste your resume to get AI-powered analysis and recommendations</p>
             </div>

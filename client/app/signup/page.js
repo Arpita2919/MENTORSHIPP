@@ -81,7 +81,7 @@ export default function Signup() {
             <p className="text-[#b9c8de] font-medium tracking-wide text-sm uppercase">Executive Protocol v4.0</p>
           </header>
           <div className="space-y-6">
-            <h2 className="text-5xl font-extrabold text-[#dae2fd] leading-tight">
+            <h2 className="text-5xl font-extrabold text-[#B9B9B9] leading-tight">
               Engineer your next <span className="text-[#adc6ff]">strategic</span> move.
             </h2>
             <p className="text-lg text-[#b9c8de] max-w-md leading-relaxed">
@@ -91,14 +91,14 @@ export default function Signup() {
 
           {/* Features */}
           <div className="grid grid-cols-2 gap-4 mt-8">
-            <div className="bg-[#222a3d] p-6 rounded-xl border border-slate-800/30">
+            <div className="bg-[#0f0f0f] p-6 rounded-xl border border-slate-800/30">
               <span className="material-symbols-outlined text-[#adc6ff] text-2xl mb-3 block">psychology</span>
-              <h3 className="text-sm font-bold uppercase tracking-widest mb-1 text-[#dae2fd]">Intelligence</h3>
+              <h3 className="text-sm font-bold uppercase tracking-widest mb-1 text-[#B9B9B9]">Intelligence</h3>
               <p className="text-xs text-[#b9c8de]">Real-time market positioning.</p>
             </div>
-            <div className="bg-[#222a3d] p-6 rounded-xl border border-slate-800/30">
+            <div className="bg-[#0f0f0f] p-6 rounded-xl border border-slate-800/30">
               <span className="material-symbols-outlined text-[#adc6ff] text-2xl mb-3 block">lock</span>
-              <h3 className="text-sm font-bold uppercase tracking-widest mb-1 text-[#dae2fd]">Vault</h3>
+              <h3 className="text-sm font-bold uppercase tracking-widest mb-1 text-[#B9B9B9]">Vault</h3>
               <p className="text-xs text-[#b9c8de]">Encrypted career assets.</p>
             </div>
           </div>
@@ -106,11 +106,11 @@ export default function Signup() {
 
         {/* Right Column: Form */}
         <section className="md:col-span-7 flex justify-center lg:justify-start">
-          <div className="bg-[#131b2e] w-full max-w-md p-10 rounded-2xl border border-slate-800/30 backdrop-blur shadow-2xl relative">
+          <div className="bg-[#0a0a0a] w-full max-w-md p-10 rounded-2xl border border-slate-800/30 backdrop-blur shadow-2xl relative">
             <div className="absolute left-0 top-12 w-[2px] h-12 bg-[#adc6ff] shadow-[0_0_15px_rgba(173,198,255,0.6)]"></div>
 
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-[#dae2fd] mb-2">Create Account</h2>
+              <h2 className="text-2xl font-bold text-[#B9B9B9] mb-2">Create Account</h2>
               <p className="text-[#b9c8de] text-sm">Join the elite network of intelligent careers.</p>
             </div>
 
@@ -127,7 +127,7 @@ export default function Signup() {
                 type="button"
                 onClick={handleGoogleSignup}
                 disabled={loading}
-                className="w-full flex items-center justify-center gap-3 bg-[#222a3d] hover:bg-[#2d3449] disabled:opacity-50 transition-all py-3.5 rounded-lg font-semibold text-[#dae2fd] border border-slate-800/30"
+                className="w-full flex items-center justify-center gap-3 bg-[#0f0f0f] hover:bg-[#1a1a1a] disabled:opacity-50 transition-all py-3.5 rounded-lg font-semibold text-[#B9B9B9] border border-slate-800/30"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="currentColor"></path>
@@ -155,7 +155,7 @@ export default function Signup() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Johnathan Executive"
-                    className="w-full bg-[#222a3d] border border-slate-700/50 focus:border-[#adc6ff] rounded-lg py-3.5 pl-12 pr-4 text-[#dae2fd] placeholder-slate-500 transition-all focus:outline-none"
+                    className="w-full bg-[#0f0f0f] border border-slate-700/50 focus:border-[#adc6ff] rounded-lg py-3.5 pl-12 pr-4 text-[#B9B9B9] placeholder-slate-500 transition-all focus:outline-none"
                     required
                   />
                 </div>
@@ -172,7 +172,7 @@ export default function Signup() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@corporation.com"
-                    className="w-full bg-[#222a3d] border border-slate-700/50 focus:border-[#adc6ff] rounded-lg py-3.5 pl-12 pr-4 text-[#dae2fd] placeholder-slate-500 transition-all focus:outline-none"
+                    className="w-full bg-[#0f0f0f] border border-slate-700/50 focus:border-[#adc6ff] rounded-lg py-3.5 pl-12 pr-4 text-[#B9B9B9] placeholder-slate-500 transition-all focus:outline-none"
                     required
                   />
                 </div>
@@ -189,7 +189,7 @@ export default function Signup() {
                     value={formData.password}
                     onChange={handleChange}
                     placeholder="••••••••"
-                    className="w-full bg-[#222a3d] border border-slate-700/50 focus:border-[#adc6ff] rounded-lg py-3.5 pl-12 pr-4 text-[#dae2fd] placeholder-slate-500 transition-all focus:outline-none"
+                    className="w-full bg-[#0f0f0f] border border-slate-700/50 focus:border-[#adc6ff] rounded-lg py-3.5 pl-12 pr-4 text-[#B9B9B9] placeholder-slate-500 transition-all focus:outline-none"
                     required
                   />
                 </div>
@@ -197,7 +197,7 @@ export default function Signup() {
 
               {/* Terms */}
               <div className="flex items-start gap-3 px-1">
-                <input type="checkbox" className="mt-1 rounded bg-[#222a3d] border-slate-700/50 text-[#adc6ff]" required />
+                <input type="checkbox" className="mt-1 rounded bg-[#0f0f0f] border-slate-700/50 text-[#adc6ff]" required />
                 <p className="text-xs text-[#b9c8de] leading-relaxed">
                   I authorize CareerAgent AI to analyze my career data under the Security Protocol.
                 </p>
